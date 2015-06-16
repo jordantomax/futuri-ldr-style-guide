@@ -1,0 +1,13 @@
+name: "Futuri LDR1 Design Specs"
+description: ""
+url: "http://futuri-ldr-specs.tigerking.nyc"
+sass:
+    sass_dir: assets/stylesheets/
+exclude: ['Gruntfile.js', 'node_modules', 'package.json']
+gems:
+  - jekyll-redirect-from
+collections:
+  instant_request_services:
+    output: true
+  interfaces:
+    output: true

@@ -1,0 +1,19 @@
+.s {
+  margin-bottom: $space*12;
+}
+
+.s-header {
+  border-bottom: $border;
+  padding-bottom: $space/2;
+  margin-bottom: $space*8;
+}
+
+.s-sub {
+  padding: $space 0;
+}
+
+.s-number {
+  color: $color-type-secondary;
+  @include type-size(body);
+  margin-right: $space*2;
+}

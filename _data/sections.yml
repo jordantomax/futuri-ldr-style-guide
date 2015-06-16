@@ -1,0 +1,37 @@
+- name: Colors
+  template: color.html
+  data: 
+    - name: Dark Grey 
+      uses: Primary Typography
+      hex: 303133
+
+    - name: Light Grey
+      uses: Secondary Typography
+      hex: 8d9199
+
+    - name: Green
+      uses: Positive Action
+      hex: 199c83
+
+    - name: Red
+      uses: Negative Action 
+      hex: ed5165 
+
+    - name: Purple
+      uses: Location
+      hex: 9b59b6 
+
+    - name: Yellow
+      uses: New 
+      hex: f1c40f 
+
+- name: Typography
+  template: typography.html
+  data:
+    - name: Heading 1
+      size: 20px
+      weight: 600
+
+    - name: Heading 2
+      size: 16px
+      weight: 700

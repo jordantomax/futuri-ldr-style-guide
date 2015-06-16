@@ -1,0 +1,18 @@
+---
+layout: default
+title:
+---
+
+{% for section in site.data.sections %}
+  <section class="s">
+    <header class="s-header">
+      <h3>
+        <span class="s-number">{{ forloop.index }}</span>
+        {{ section.name }}
+      </h3>
+    </header>
+
+    {% assign data = section.data %}
+    {% include {{ section.template }} %}
+  </section>
+{% endfor %}

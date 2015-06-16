@@ -1,0 +1,65 @@
+$space: 0.5rem;
+$background: #f5f5f5;
+
+$g-header-height: $space*3;
+
+$l-sidebar-width: 25rem;
+$l-max-width: 94rem;
+$l-gutter: $space*4;
+
+$el-headers: h1, h2, h3, h4, h5, h6;
+
+$mq-sm-width: 40rem;
+$mq-med-width: 60rem;
+
+$mq-text-mob: "only screen and (min-width:";
+$mq-text-desk: "only screen and (max-width:";
+$mq-text-close: ")";
+
+$mq-sm: $mq-text-mob + $mq-sm-width + $mq-text-close;
+$mq-med: $mq-text-mob + $mq-med-width + $mq-text-close;
+$mq-sm-desk: $mq-text-desk + $mq-sm-width + $mq-text-close;
+$mq-med-desk: $mq-text-desk + $mq-med-width + $mq-text-close;
+
+$ui-border-radius: 0.5rem;
+$ui-height: 3.5rem;
+$ui-height-large: 4.5rem;
+
+$mod-notify-width: 50rem;
+$mod-modal-width: 40rem;
+$mod-border-radius: $ui-border-radius*2;
+
+// colors
+$color-grey-dark: #303133;
+$color-grey-med: #555;
+$color-grey-med-light: #8d9199;
+$color-grey-xlight: #eaeaea;
+$color-white: #fff;
+$color-black: #000;
+
+$color-type: $color-grey-med;
+$color-type-secondary: $color-grey-med-light;
+
+$color-link: #428bca;
+
+$color-border: #e1e3e6;
+
+$border-style: 1px solid;
+$border: $border-style $color-border;
+
+$type-font-family: "lft-etica", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$type-weight-normal: normal;
+$type-base-font-size: 10;
+$type-base-font-unit: px;
+$type-weight-light: 300;
+$type-weight-bold: 600;
+
+$type-sizes: (
+  xsmall: (9, 1.5),
+  small:  (12, 1.5),
+  body:   (16, 1.35),
+  big:    (18,  1.2),
+  large:  (28,  1.2),
+  xlarge: (36,  1.2),
+  huge:   (60, 1.2)
+);

@@ -1,0 +1,13 @@
+<ul class="l-tile-wrap">
+  {% for color in data %}
+  <li class="l-tile-3">
+    <div class="l-tile-content">
+      <div class="m-color-swatch" style="background-color: #{{ color.hex }};"></div>
+      <div class="m">
+        <h4>{{ color.name }}</h4>
+        <p class="type-secondary type-sm no-mar">#{{ color.hex }}</p>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
