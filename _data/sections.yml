@@ -30,8 +30,20 @@
   data:
     - name: Heading 1
       size: 20px
-      weight: 600
+      weight: 500
 
     - name: Heading 2
-      size: 16px
-      weight: 700
+      size: 17px
+      weight: 500
+
+    - name: Body
+      size: 13px
+      weight: 400
+
+    - name: Small
+      size: 12px
+      weight: 400
+
+    - name: UI
+      size: 11px
+      weight: 600

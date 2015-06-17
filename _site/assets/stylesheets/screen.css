@@ -1656,7 +1656,7 @@ input[type="password"] {
   width: 100%; }
 
 .m-typography-name {
-  float: left; }
+  margin-bottom: 0.65em; }
 
 .g-header {
   padding: 4rem 0;
