@@ -1,6 +1,7 @@
-.mod-toc {
-  ul {
-    padding-top: $space;
-    padding-bottom: $space;
-  }
+$pf: '.m-toc';
+
+#{$pf}-link {
+  color: $color-type;
+  font-weight: 500;
+  display: inline;
 }

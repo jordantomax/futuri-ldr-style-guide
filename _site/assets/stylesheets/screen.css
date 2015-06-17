@@ -1817,9 +1817,10 @@ input[type="password"] {
 .mod-dropdown-right {
   right: 0; }
 
-.mod-toc ul {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
+.m-toc-link {
+  color: #303133;
+  font-weight: 500;
+  display: inline; }
 
 .m-color-swatch {
   height: 8rem;

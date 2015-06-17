@@ -3,8 +3,27 @@ layout: default
 title:
 ---
 
+<header class="s-header">
+  <h3>
+    <span class="s-number">00</span>
+    Table Of Contents 
+  </h3>
+</header>
+
+
+<div class="s">
+  <ul>
+    {% for section in site.data.sections %}
+    <li>
+       <span class="s-number">0{{ forloop.index }}</span>
+       <a class="m-toc-link" href="#{{section.name}}">{{section.name}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
 {% for section in site.data.sections %}
-  <section class="s">
+  <section class="s" id="{{section.name}}">
     <header class="s-header">
       <h3>
         <span class="s-number">0{{ forloop.index }}</span>
