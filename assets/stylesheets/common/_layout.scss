@@ -1,6 +1,6 @@
 .l-wrap {
   padding: 0 $space*4;
-  width: $l-max-width;
+  max-width: $l-max-width;
   margin: 0 auto;
   @include clearfix();
 }
@@ -29,9 +29,11 @@
   }
 
   @for $j from 1 to $i {
-    .l-tile-#{$j}-of-#{$i} {
-      float: left;
-      width: (100%/$i)*$j;
+    @media #{$mq-sm} {
+      .l-tile-#{$j}-of-#{$i} {
+        float: left;
+        width: (100%/$i)*$j;
+      }
     }
   }
 }

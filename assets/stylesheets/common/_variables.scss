@@ -36,6 +36,7 @@ $color-grey-med-light: #8d9199;
 $color-grey-xlight: #eaeaea;
 $color-white: #fff;
 $color-black: #000;
+$color-yellow: #f1c500;
 
 $color-type: $color-grey-med;
 $color-type-secondary: $color-grey-med-light;
@@ -55,9 +56,9 @@ $type-weight-light: 300;
 $type-weight-bold: 600;
 
 $type-sizes: (
-  xsmall: (9, 1.5),
-  small:  (12, 1.5),
-  body:   (16, 1.35),
+  xsmall: (11, 1.5),
+  small:  (14, 1.5),
+  body:   (16, 1.5),
   big:    (18,  1.2),
   large:  (28,  1.2),
   xlarge: (36,  1.2),

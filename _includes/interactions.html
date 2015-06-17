@@ -1,0 +1,26 @@
+{% for interaction in data %}
+  <div class="m-interaction">
+    <h4 class="m-interaction-name">{{interaction.name}}</h4>
+
+    {% if interaction.img %}
+      <ul class="l-tile-wrap">
+        <li class="l-tile-2-of-5">
+        <div class="l-tile-content m-interaction-img">
+          <img src="{{basePath}}/assets/img/regions/{{interaction.img}}">
+        </div>
+        </li>
+
+        <li class="l-tile-3-of-5">
+        <div class="l-tile-content">
+          <p class="m-interaction-desc">{{interaction.desc}}</p>
+          {% if interaction.toggle %}
+            <p class="m-interaction-toggle"><i class="m-interaction-toggle-star icon-star"></i>{{interaction.toggle}}</p>
+          {% endif %}
+        </div>
+        </li>
+      </ul>
+    {% else %}
+      <p class="m-interaction-desc">{{interaction.desc}}</p>
+    {% endif %}
+  </div>
+{% endfor %}

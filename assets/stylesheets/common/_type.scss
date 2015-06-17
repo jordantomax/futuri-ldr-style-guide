@@ -34,24 +34,24 @@ a {
 
 h1 {
   @include type-size(huge);
-  font-weight: 300;
+  font-weight: 600;
 }
 
 h2 {
   @include type-size(xlarge);
   margin-bottom: $space*6;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 h3 {
   @include type-size(large);
   margin-bottom: $space*4;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 h4 {
   @include type-size(big);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h5 {
@@ -72,6 +72,10 @@ b, strong, .type-strong {
 
 .type-weight-normal {
   font-weight: normal;
+}
+
+.type-xsm {
+  @include type-size(xsmall);
 }
 
 .type-sm {

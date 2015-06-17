@@ -1,0 +1,29 @@
+$pf: '.m-interaction';
+
+#{$pf} {
+  @include clearfix();
+  margin-bottom: $space*12;
+}
+
+#{$pf}-name {
+  margin-bottom: $space*6;
+
+}
+
+#{$pf}-img {
+  padding-right: $space*4;
+}
+
+#{$pf}-desc {
+  @include type-size(small);
+}
+
+#{$pf}-toggle {
+  @include type-size(small);
+}
+
+#{$pf}-toggle-star {
+  margin-right: $space;
+  color: $color-yellow;
+  @include type-size(xsmall);
+}

@@ -2,48 +2,148 @@
   template: color.html
   data: 
     - name: Dark Grey 
-      uses: Primary Typography
+      uses: primary typography
       hex: 303133
 
     - name: Light Grey
-      uses: Secondary Typography
+      uses: secondary typography
       hex: 8d9199
 
+    - name: Extra Light grey
+      uses: placeholder input text
+      hex: bbc0c7
+
     - name: Green
-      uses: Positive Action
+      uses: positive actions
       hex: 199c83
 
     - name: Red
-      uses: Negative Action 
+      uses: negative actions
       hex: ed5165 
 
     - name: Purple
-      uses: Location
+      uses: location
       hex: 9b59b6 
 
     - name: Yellow
-      uses: New 
+      uses: new 
       hex: f1c40f 
+
 
 - name: Typography
   template: typography.html
   data:
-    - name: Heading 1
-      size: 20px
-      weight: 500
+    - name: Headings & Titles
+      font: Open Sans
+      data:
+        - name: Heading 1
+          size: 20px
+          weight: 500
 
-    - name: Heading 2
-      size: 17px
-      weight: 500
+        - name: Heading 2
+          size: 17px
+          weight: 500
+    - name: Body Text
+      data:
+        - name: Body
+          size: 13px
+          weight: 400
 
-    - name: Body
-      size: 13px
-      weight: 400
+        - name: Body Small
+          size: 12px
+          weight: 400
 
-    - name: Small
-      size: 12px
-      weight: 400
+    - name: UI Text
+      data:
+        - name: UI
+          size: 11px
+          weight: 600
 
-    - name: UI
-      size: 11px
-      weight: 600
+
+- name: User Interface
+  template: ui.html
+  data:
+    - name: Button
+    - name: Input 
+    - name: Radio Selector
+    - name: Alert
+    - name: Select Dropdown
+
+
+- name: Interactions & Transitions
+  template: interactions.html
+  data:
+    - name: Global Transitions
+      desc: All transition should use animations to show changes. There should never be a transition that changes, shows or hides content without an animation to show how the transition is changing content.
+
+    - name: Now Playing Related
+      img: now-playing-related.png
+      desc: This region is dedicated to content related to the now playing artist. When new related content is available, it's height should be calculated before it is injected into the DOM. The height of the module should then be animated to that height, and finally the new content should be scrolled downward into view.
+
+    - name: Voting Carousel
+      img: voting-carousel.png
+      desc: The voting carousel is a simple scrollable overflowing element, which makes it usable on mobile devices as well as desktop devices. In order to create a more dynamic appearance and to show the user that it scrolls, it should automatically scroll slowly to the right on load. Once the user manually scrolls, automatic scrolling should cease.
+        <br><br>
+        The time left should change as often as possible, and text color should change to reflect the time. 10min and above should be green, 5min and above should be yellow. Below 5min should be red.
+        <br><br>
+        There are three clickable hotspots within each voting block. The play button should start thirty second playback, the song name should link to the song page, and the remaining area of the block should cast a vote, see below.
+
+    - name: Voting Carousel Results
+      img: voting-carousel-results.png
+      desc: Once a user votes, we fade in overlays for the carousel, and simultaneously animate the % number with the circlular chart. The number should change very quickly from 1 to 2 to 3, etc until it reaches the correct %, while the chart should fill in at the same rate. Once the animation is complete, allow the overlays to sit for 3 seconds unless the user interacts with the module by setting an alert or sharing, in which case the timer should be reset to 3 seconds once they stop interacting.
+        <br><br>
+        The user should be allowed to vote 5 times in this fashion, and once they have, we will force them to wait another 30 seconds to vote again as shown in the image.
+        <br><br>
+        Clicking 'Alert Me' triggers the same behavior as an ordinary song row, with Dark UI as depicted in the UI Section of this document. Clicking share shows an overlay identical to the share modal shown above.
+
+    - name: Playlist First User Experience
+      img: playlist-fux.png
+      desc: When the playlist first becomes visible in the module, this small overlay should be triggered to clarify the functionality of the bell icon. 
+
+    - name: Playlist
+      img: playlist.png
+      desc: Clicking the 'Music Type' dropdown shows all music types available. Selecting a music type such as 'local' would filter the entire playlist down to local music only. Those items are also differentiated by small badges on the top right corner of album art. Local music is indicated by a location pin, new music is indicated by a star.
+
+    - name: Playlist Voting
+      img: playlist-voting.png
+      desc: Voting up should expose the 'Alert Me' text on a row, and also animate open the small drawer of 'Popularity' and 'Share' 
+      toggle: Stations should have the option to toggle on/off the 'Popularity' bar. When on, this should show and animate to the correct relative popularity. It should also reflect the color of the voting direction (i.e. green or red).
+        <br><br>
+        Clicking anywhere on a playlist row that is not an action (i.e. 'Upvote', 'Downvote', 'Play' (anywhere on album art)) will take the user to the song page, see below.
+
+    - name: Playlist Alert Set
+      img: playlist-alert-set.png
+      desc: Once a user clicks the bell (either with exposed 'Alert Me' text or without), we will set the alert for them, and show the options to adjust the alert. These options include removing the alert, and changing the number of alerts that the user will receive for that song.
+        <br><br>
+        If the user setting an alert does not have a delivery method for the alert (i.e. if it's their first alert or otherwise), we will move them to the global settings page, where we ask them to add a method for delivering the alert.
+
+    - name: Song
+      img: song.png
+      desc: Every song has a song page that showcases that artist's content and allows users to easily take action on that song. All available related content will be displayed here in addition to other songs by the artist. Text in the callback button should be limited to a certain number of characters to ensure that all 3 buttons can fit in this space.
+
+    - name: Alert Settings
+      img: settings.png
+      desc: User's can navigate to this screen either by clicking the bell in the top right of the header, or by setting an alert without having a delivery method set. Once here, clicking a delivery method reveals an input appropriate for that delivery method (i.e. changing the placeholder text to reflect the method).
+        <br><br>
+        The user's typing in this input should be detected. Once the user stops typing for around 1.5s (or whatever feels comfortable), we should check the method they've entered. If it's valid, we will fire an alert (as seen below) that says the user's settings have been saved. Otherwise, we'll show inline small body text in red below the input stating that they've entered an invalid twitter handle, phone number, or email.
+
+    - name: Notifications
+      img: notification.png
+      desc: This is a global notification, which can be used whenever appropriate.
+      toggle: The specific notification for new voting sessions should toggleable on/off by stations. If turned on, we will show this notification whenever there is a new voting session. Clicking anywhere on the overlay will scroll the user to the new voting session.
+
+    - name: Ads
+      img: ads.png
+      desc: Stations should have an allowance for intersticial ads among the playlist as well as the option for a sponsored 1v1 faceoff (which would replace the traditional ad unit when present).
+
+    - name: 1v1 Faceoff
+      img: ads-faceoff.png
+      desc: 1v1 faceoffs will function similar to normal voting sessions in most respects. The various link hotspots are the same (though in different locations). Once the user votes, we will show results as below.
+
+    - name: 1v1 Faceoff Results
+      img: ads-faceoff-results.png
+      desc: Once a user votes, we will fade in the results, animating them in the same fashion as a normal voting session. After 3 seconds (or what feels comfortable), we will animate the header down to expose sharing options as below.
+
+    - name: 1v1 Faceoff Share
+      img: ads-faceoff-share.png
+      desc: The user has the option to share the voting session. If they close this option, it will again show results.
