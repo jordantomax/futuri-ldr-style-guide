@@ -1450,7 +1450,8 @@ b, strong, .type-strong {
     margin-right: 0.5rem;
     margin-left: -0.25rem; }
   .ui-btn-secondary:hover {
-    background-color: rgba(0, 0, 0, 0.05); }
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #303133; }
 
 .ui-btn-set > * {
   display: inline-block;
