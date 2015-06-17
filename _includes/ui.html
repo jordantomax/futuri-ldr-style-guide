@@ -1,3 +1,39 @@
 {% for ui in data %}
-  <h4>{{ ui.name }}</h4>
+  <div class="s3">
+    <header class="s4">
+      <h4 class="s5">{{ ui.name }}</h4>
+      {% if ui.desc %}
+      <p class="type-sm type-secondary">{{ ui.desc }}</p>
+      {% endif %}
+    </header>
+
+    {% if ui.name == 'Buttons' %}
+      <button class="ui-btn">Button</button>
+    {% endif %}
+
+    {% if ui.name == 'Radio Selector' %}
+      <ul class="ui-radio-selector-bar has-3">
+        <li class="active">Twitter</li>
+        <li>SMS</li>
+        <li>Email</li>
+      </ul>
+    {% endif %}
+
+    {% if ui.name == 'Inputs' %}
+      <input type="text" class="ui-form-input" placeholder="@handle" />
+    {% endif %}
+
+    {% if ui.name == 'Secondary Buttons' %}
+      {% for color in ui.colors %}
+      <button class="ui-btn-secondary {{color.class}}" style="border: 1px solid rgba({{color.rgb}}, 0.25); color: rgba({{color.rgb}}, 1)">{% if color.icon %}<i class="icon-{{color.icon}}"></i>{% endif %}{{color.name}}</button>
+      {% endfor %}
+    {% endif %}
+
+    {% if ui.name == 'Secondary Buttons On Dark' %}
+    <div class="m-ui-on-dark on-dark">
+      <button class="ui-btn-secondary ui-btn ui-btn-alert" style="border: 1px solid rgba({{color.rgb}}, 0.4); color: rgba({{color.rgb}}, 1)"><i class="icon-bell"></i>Alert Me</button>
+      <button class="ui-btn-secondary ui-btn" style="border: 1px solid rgba({{color.rgb}}, 0.4); color: rgba({{color.rgb}}, 1)">X92.9 Callback</button>
+    </div>
+    {% endif %}
+  </div>
 {% endfor %}

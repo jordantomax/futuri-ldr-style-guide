@@ -1,9 +1,0 @@
-@for $i from 1 through 8 {
-  .s#{$i} {
-    margin-bottom: $space*$i;
-  }
-}
-
-.s-stretch {
-  width: 100%;
-}

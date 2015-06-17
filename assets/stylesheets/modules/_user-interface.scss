@@ -1,0 +1,7 @@
+$pf: '.m-ui';
+
+#{$pf}-on-dark {
+  background-color: #333;
+  padding: $space*4;
+  @include border-radius($ui-border-radius);
+}

@@ -21,7 +21,7 @@ $mq-med: $mq-text-mob + $mq-med-width + $mq-text-close;
 $mq-sm-desk: $mq-text-desk + $mq-sm-width + $mq-text-close;
 $mq-med-desk: $mq-text-desk + $mq-med-width + $mq-text-close;
 
-$ui-border-radius: 0.5rem;
+$ui-border-radius: 0.3rem;
 $ui-height: 3.5rem;
 $ui-height-large: 4.5rem;
 
@@ -37,16 +37,20 @@ $color-grey-xlight: #eaeaea;
 $color-white: #fff;
 $color-black: #000;
 $color-yellow: #f1c500;
+$color-green: #199c83;
+$color-accent: $color-green;
 
-$color-type: $color-grey-med;
+$color-type: $color-grey-dark;
 $color-type-secondary: $color-grey-med-light;
 
 $color-link: #428bca;
 
-$color-border: #e1e3e6;
+$color-border: #cdcfd1;
+$color-border-light: #e1e3e6;
 
 $border-style: 1px solid;
 $border: $border-style $color-border;
+$border-light: $border-style $color-border-light;
 
 $type-font-family: "lft-etica", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $type-weight-normal: normal;
@@ -57,7 +61,7 @@ $type-weight-bold: 600;
 
 $type-sizes: (
   xsmall: (11, 1.5),
-  small:  (14, 1.5),
+  small:  (14, 1.35),
   body:   (16, 1.5),
   big:    (18,  1.2),
   large:  (28,  1.2),

@@ -1,17 +1,42 @@
 .ui-btn, button, input[type="submit"] {
   display: inline-block;
   font-weight: bold;
-  background-color: $color-link;
+  background-color: $color-accent;
   color: $color-white;
   border: 0;
-  @include ui-btn-height($space*8);
-  padding: 0 1.5em;
+  @include ui-btn-height(3.75rem);
+  line-height: 1em;
+  padding: 0 1em;
   text-align: center;
   @include border-radius($ui-border-radius);
+  @include trans();
 
   &:hover {
     color: $color-white;
-    background-color: lighten($color-link, 10);
+    background-color: darken($color-accent, 5);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.ui-btn-secondary {
+  height: 25px;
+  font-size: 11px;
+  line-height: 1em;
+  border: $border;
+  background-color: transparent;
+  color: $color-type;
+  @include trans();
+
+  i {
+    margin-right: $space;
+    margin-left: -#{$space/2};
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -26,4 +51,22 @@
   @extend .ui-btn;
   @include type-size(large);
   @include ui-btn-height($space*3);
+}
+
+.on-dark {
+  .ui-btn {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: $color-white;
+    @include trans;
+
+    &:hover {
+      border-color: $color-white;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.ui-btn-alert {
+  @include border-radius(10rem);
 }

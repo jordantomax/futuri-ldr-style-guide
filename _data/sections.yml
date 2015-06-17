@@ -43,6 +43,13 @@
         - name: Heading 2
           size: 17px
           weight: 500
+
+        - name: Heading 3
+          size: 9px
+          weight: 600
+          transform: uppercase
+          spacing: 1px
+
     - name: Body Text
       data:
         - name: Body
@@ -63,11 +70,28 @@
 - name: User Interface
   template: ui.html
   data:
-    - name: Button
-    - name: Input 
+    - name: Buttons
+      desc: The color of buttons should be customizable by stations
+
     - name: Radio Selector
-    - name: Alert
-    - name: Select Dropdown
+      desc: The color of radio selectors should be customizable by stations
+
+    - name: Inputs
+
+    - name: Secondary Buttons 
+      desc: Secondary buttons can be adjusted to fit specific needs. When using colors alternative to the standard button, use a stroke that is 40% the opacity of the button text color. 
+      colors:
+        - name: Alert Me
+          icon: bell
+          class: ui-btn-alert
+
+        - name: Button
+
+        - name: Tweet
+          rgb: 64, 153, 255
+
+    - name: Secondary Buttons On Dark
+      desc: All buttons on dark should use white text and a 40% opacity white border. 
 
 
 - name: Interactions & Transitions

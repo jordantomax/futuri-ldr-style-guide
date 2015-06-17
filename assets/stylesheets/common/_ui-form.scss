@@ -7,14 +7,22 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  padding: $space/2;
-  height: $ui-height;
-  line-height: $ui-height;
-  @include border-radius($ui-border-radius);
+  background-color: #f5f6f7;
   border: $border;
+  padding: 0 $space*2;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  @include box-shadow(inset 0.1rem 0 0.4rem rgba(0, 0, 0, 0.1));
+  @include border-radius($ui-border-radius);
+  @include trans();
+
+  &:hover {
+    border-color: darken($color-border, 7);
+  }
 
   &:focus {
     outline: 0;
+    border-color: darken($color-border, 15);
   }
 
   &.ui-form-input-large {
@@ -41,5 +49,55 @@ input[type="password"] {
 .ui-form-checkbox-label {
   input {
     margin-right: $space/2;
+  }
+}
+
+.ui-radio-selector-bar {
+  @include clearfix();
+  min-width: 20rem;
+
+  &.has-3 {
+    li {
+      width: 100/3 * 1%;
+    }
+
+  }
+
+  li {
+    border: $border;
+    border-left: 0;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    padding: 0 $space*2;
+    float: left;
+    text-align: center;
+    font-weight: 600;
+    color: $color-type-secondary;
+    @include trans();
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($color-black, 0.05);
+    }
+
+    &:first-child {
+      border-left: $border;
+      @include border-left-radius($ui-border-radius);
+    }
+
+    &:last-child {
+      @include border-right-radius($ui-border-radius);
+    }
+
+    &.active {
+      color: $color-white;
+      background-color: $color-accent;
+      border-color: $color-accent;
+      cursor: default;
+
+      &:hover {
+        background-color: $color-accent;
+      }
+    }
   }
 }

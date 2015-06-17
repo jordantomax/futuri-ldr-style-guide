@@ -42,3 +42,7 @@
   width: $width;
   height: $height;
 }
+
+@mixin trans($attr: all) {
+  @include transition($attr 0.2s ease-in-out);
+}

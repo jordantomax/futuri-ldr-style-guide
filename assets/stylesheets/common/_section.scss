@@ -2,8 +2,32 @@
   margin-bottom: $space*16;
 }
 
+.s1 {
+  margin-bottom: $space*12
+}
+
+.s2 {
+  margin-bottom: $space*8
+}
+
+.s3 {
+  margin-bottom: $space*6
+}
+
+.s4 {
+  margin-bottom: $space*4;
+}
+
+.s5 {
+  margin-bottom: $space*2;
+}
+
+.s6 {
+  margin-bottom: $space;
+}
+
 .s-header {
-  border-bottom: $border;
+  border-bottom: $border-light;
   padding-bottom: $space/2;
   margin-bottom: $space*8;
 }

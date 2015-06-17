@@ -1,9 +1,9 @@
 {% for category in data %}
 <div class="m-typography-category">
-  <h4 class="m-typography-category-name">{{category.name}}</h4>
+  <h4 class="m-typography-category-name s3">{{category.name}}</h4>
   {% for type in category.data %}
   <div class="pos-clearfix">
-    <h5 class="m-typography-name" style="font-weight: {{type.weight}}; font-size: {{type.size}}">{{type.name}}, weight: {{type.weight}}, size: {{type.size}}</h5>
+    <h5 class="m-typography-name" style="font-weight: {{type.weight}}; font-size: {{type.size}}; text-transform: {{type.transform}}; letter-spacing: {{type.spacing}}">{{type.name}}, weight: {{type.weight}}, size: {{type.size}}{% if type.spacing %}, letter-spacing: {{type.spacing}}{% endif %}{% if type.transform %}, transform: {{type.transform}} {% endif %} </h5>
     {% if category.name == "Body Text"%}
       <p class="m-typography-p" style="font-size: {{type.size}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit aliquam leo, vitae porta magna condimentum nec. Donec tincidunt auctor elit, sed finibus turpis venenatis quis. Donec vitae viverra enim. Suspendisse ultrices ipsum sit amet aliquam euismod.</p>
     {% endif %}
