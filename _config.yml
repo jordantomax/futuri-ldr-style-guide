@@ -1,6 +1,6 @@
 name: "Futuri LDR1 Design Specs"
 description: ""
-url: "http://futuri-ldr-specs.tigerking.nyc"
+url: "http://futuri-ldr-style-guide.tigerking.nyc"
 sass:
     sass_dir: assets/stylesheets/
 exclude: ['Gruntfile.js', 'node_modules', 'package.json']
